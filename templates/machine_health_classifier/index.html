@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Health Classifier</title>
+    <link rel="icon" href="{% static 'images/gear.png' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,0.8)), url('{% static "images/bg.jpg" %}');
+        }
+    </style>
+</head>
+<body>
+    
+    {% block content%}  
+    <form method="post" enctype="multipart/form-data" action="result">
+        {% csrf_token %}
+
+
+        <div id="lfalign">
+            <label>Upload Machinery Images Here</label> 
+            <br><br><br>
+            <input name="file" type="file"><br><br>
+            <select name="dropdown">
+                <option selected="true" disabled>--Select the model--</option>
+                <option value="vgg16">VGG16</option>
+                <option value="mobilenet">MobileNet</option>
+                <option value="densenet">DenseNet</option>
+                <option value="resnet">ResNet</option>
+                <option value="inception">Inception</option>
+                <option value="heatnet">HeatNet</option>
+            </select>
+            <br><br><br>
+            <input type="submit" value="Submit" ></div>
+        </div>
+
+        <div id="rgalign">
+            <h1>Machinery Health Classifier</h1>
+            <br>
+            <img src={{filePathName}} alt='imagename'>
+            <h2>{{predictedLabel}}</h2>
+            <h3>{{predictedPercent}}</h3>
+        </div>
+
+        
+    </form>
+    {% endblock %}
+
+</body>
+</html>

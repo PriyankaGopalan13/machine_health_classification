@@ -1,0 +1,85 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+#lfalign{
+    float: right; 
+    top:0%;
+    background-color: rgba(165, 80, 80, 0.9);
+    color: yellow;
+    padding: 80px;
+    height: 543px;
+    text-align: center;
+    position: absolute;
+    left: 1068px;
+    padding-top: 130px;
+    font-size: 30px;
+}
+#rgalign{
+    padding-top: 40px;
+    text-align: center;
+    float: left;
+    position: absolute;
+    left: 250px;
+    color: wheat;
+    font-weight: 300;
+}
+img{
+    height: 400px;
+    width: 400px;
+}
+input[type=submit]{
+    border:2px solid yellow;
+    padding:5px 20px;
+    background:linear-gradient(yellow,yellow) center/100% 0px no-repeat;
+    color: yellow;
+    transition:0.2s all linear;
+    height: 40px;
+    width: 250px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+input[type=submit]:hover{
+    background-size:100% 100%;
+    color: rgba(165, 80, 80);
+}
+input[type=file]::file-selector-button {
+    border:2px solid yellow;
+    color: yellow;
+    padding:5px 20px;
+    background:linear-gradient(yellow,yellow) center/100% 0px no-repeat;
+    transition:0.2s all linear;
+    margin-left: 12px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bolder;
+}  
+input[type=file]::file-selector-button:hover {
+    background-size:100% 100%;
+    color: rgba(165, 80, 80);
+}
+select{
+    border:2px solid yellow;
+    width:250px;
+    height:40px;
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 20px;
+    color: yellow;
+    background: transparent;
+}
+select option{
+    background: yellow;
+    color: rgba(165, 80, 80);
+    font-size: 15px;
+    font-weight: bolder;
+}
+h1, label{
+    font-weight: 900;
+    font-size: 30px;
+}
+h1{
+    font-size: 40px;
+}
